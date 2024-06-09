@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  #click {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+<h3 >Welcome to my website</h3>
+<div id="click">
+  <p>Hi Friends and students,</p>
+  <p>One important message is for you:</p>
+  <p>In this institution, we are conducting the WEBPAGE DEVELOPER competition</p>
+  <p> Anyone can participate.</p>
+  <p>For more rules and regulations, click the link below:⬇</p>
+  <button id="rules-button">Rules and Regulations</button>
+  <p>Price details are given in the link below:⬇</p>
+  <a href="winner.html" style="text-decoration: none;"><button id="birthday-heading">price details !</button></a>
+</div>
+
+<script>
+  // Add some interactivity with JavaScript
+  document.getElementById("rules-button").addEventListener("click", function() {
+    alert("1. Registration opening date: 10-06-2024 to 12-06-2024\n2. Two members are only allowed in one team\n3. Registration is free of cost\n4. Projects are to be submitted by 20-06-2024\n5. Winner announcement by 21-06-2024");
+  });
+</script>
+</body>
+</html>

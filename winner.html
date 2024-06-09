@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slideshow</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .slide-container {
+    position: relative;
+  }
+  .slideshow-img {
+    width: 800px; /* Fixed width */
+    height: 600px; /* Fixed height */
+    display: none;
+    margin: auto; /* Center the image horizontally */
+  }
+  .slide-text {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<div id="slideshow-container">
+  <div class="slide-container">
+    <img class="slideshow-img" src="movie ticket.jpg" alt="Image 1">
+    <div class="slide-text">First price</div>
+  </div>
+  <div class="slide-container">
+    <img class="slideshow-img" src="gift vocher.png" alt="Image 2">
+    <div class="slide-text">Second price</div>
+  </div>
+  <div class="slide-container">
+    <img class="slideshow-img" src="mystery box.webp" alt="Image 3">
+    <div class="slide-text">Third price</div>
+  </div>
+</div>
+<button id="next-btn">Next</button>
+
+<script>
+  var slideIndex = 0;
+
+  function showSlides(index) {
+    var slides = document.getElementsByClassName("slideshow-img");
+    var texts = document.getElementsByClassName("slide-text");
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      texts[i].style.display = "none";
+    }
+    slides[index].style.display = "block";
+    texts[index].style.display = "block";
+  }
+
+  // Function to show the first slide when the page loads
+  window.onload = function() {
+    showSlides(slideIndex);
+  };
+
+  document.getElementById("next-btn").addEventListener("click", function() {
+    slideIndex++;
+    if (slideIndex >= document.getElementsByClassName("slideshow-img").length) {
+      slideIndex = 0;
+    }
+    showSlides(slideIndex);
+  });
+</script>
+</body>
+</html>
